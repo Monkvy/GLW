@@ -6,7 +6,7 @@
 *.lo
 *.o
 *.obj
-bin
+bin/*
 bin-obj
 
 # Precompiled Headers
