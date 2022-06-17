@@ -29,7 +29,6 @@ bin-obj
 *.lib
 
 # Executables
-bin/GLW.exe
 *.out
 *.app
 
