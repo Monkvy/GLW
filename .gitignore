@@ -29,7 +29,7 @@ bin-obj
 *.lib
 
 # Executables
-bin/*/GLW/*.exe
+bin/GLW.exe
 *.out
 *.app
 
