@@ -29,7 +29,7 @@ bin-obj
 *.lib
 
 # Executables
-*.exe
+bin/*.exe
 *.out
 *.app
 
