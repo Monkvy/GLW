@@ -6,7 +6,7 @@
 #include <GL/glew.h>
 
 
-namespace GLW
+namespace glw
 {
 	uint32_t VertexBufferElement::GetSizeOfType(uint32_t type)
 	{

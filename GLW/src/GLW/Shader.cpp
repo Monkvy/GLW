@@ -7,7 +7,7 @@
 #include <GL/glew.h>
 
 
-namespace GLW 
+namespace glw
 {
     Shader::Shader(const std::string& filepath)
         : m_Filepath(filepath), m_RendererID(0)

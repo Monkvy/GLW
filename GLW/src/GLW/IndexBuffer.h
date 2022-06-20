@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-namespace GLW 
+namespace glw
 {
 	class IndexBuffer 
 	{

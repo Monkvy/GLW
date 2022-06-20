@@ -5,7 +5,7 @@
 #include "Vertex.h"
 
 
-namespace GLW 
+namespace glw
 {
     VertexBuffer::VertexBuffer(uint32_t maxVertices, const void* data)
     {

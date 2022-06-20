@@ -9,7 +9,7 @@
     ASSERT(GLW::GLLogCall(#x, __FILE__, __LINE__))
 
 
-namespace GLW 
+namespace glw 
 {
 	static uint32_t minGLErrorSeverity;
 

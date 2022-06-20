@@ -3,7 +3,7 @@
 #include "Vertex.h"
 
 
-namespace GLW 
+namespace glw
 {
 	VertexArray::VertexArray() 
 	{

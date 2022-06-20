@@ -13,7 +13,7 @@
 #define GLW_MAX_INDICES 600
 
 
-namespace GLW 
+namespace glw
 {
     class Renderer 
     {

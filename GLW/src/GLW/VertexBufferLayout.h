@@ -4,7 +4,7 @@
 #include <GL/glew.h>
 
 
-namespace GLW 
+namespace glw
 {
 	struct VertexBufferElement 
 	{

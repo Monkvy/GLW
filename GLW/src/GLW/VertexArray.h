@@ -3,7 +3,7 @@
 #include "VertexBufferLayout.h"
 
 
-namespace GLW 
+namespace glw
 {
 	class VertexArray 
 	{

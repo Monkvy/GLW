@@ -3,7 +3,7 @@
 #include <GL/glew.h>
 
 
-namespace GLW 
+namespace glw
 {
     IndexBuffer::IndexBuffer(uint32_t maxIndices) : m_Count(maxIndices)
 	{

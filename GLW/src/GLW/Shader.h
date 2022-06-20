@@ -4,7 +4,7 @@
 #include <glm/glm.hpp>
 
 
-namespace GLW 
+namespace glw
 {
 	// The return type of the Shader::ParseShader() function.
 	struct ShaderProgramSource 

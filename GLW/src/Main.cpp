@@ -12,7 +12,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-#include "GLW/gwl.h"
+#include "GLW/glw.h"
 
 
 int main()
@@ -49,18 +49,18 @@ int main()
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	// Initialize GLW
-	GLW::InitGLErrorCallback(GL_DEBUG_SEVERITY_NOTIFICATION+1);
+	glw::InitGLErrorCallback(GL_DEBUG_SEVERITY_NOTIFICATION+1);
 
 	// Print the current OpenGL version
 	std::cout << "GL " << glGetString(GL_VERSION) << std::endl;
 
 	// Renderer
 	glm::mat4 proj = glm::ortho(0.0f, (float)width, (float)height, 0.0f, -1.0f, 1.0f);
-	GLW::Renderer renderer(proj, "res/shaders/Basic.shader");
+	glw::Renderer renderer(proj, "res/shaders/Basic.shader");
 
 	// Create textures
-	GLW::Texture texture1("res/img1.png");
-	GLW::Texture texture2("res/img2.png");
+	glw::Texture texture1("res/img1.png");
+	glw::Texture texture2("res/img2.png");
 	texture1.Bind(0);
 	texture2.Bind(1);
 

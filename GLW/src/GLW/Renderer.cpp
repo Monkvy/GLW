@@ -5,7 +5,7 @@
 #include <glm/glm.hpp>
 
 
-namespace GLW 
+namespace glw
 {
 
 	Renderer::Renderer(glm::mat4 projectionMatrix, std::string shaderFilePath)
@@ -30,25 +30,25 @@ namespace GLW
 
 	void Renderer::DrawRect(vec2 pos, vec2 size, uint32_t textureID)
 	{
-		GLW::Vertex v0{
+		Vertex v0{
 			{ pos.x, pos.y },
 			{ m_Color.x, m_Color.y, m_Color.z, m_Color.w },
 			{ 0.0, 0.0 },
 			(float)textureID
 		};
-		GLW::Vertex v1{
+		Vertex v1{
 			{ pos.x, pos.y + size.y},
 			{ m_Color.x, m_Color.y, m_Color.z, m_Color.w },
 			{ 0.0, 1.0 },
 			(float)textureID
 		};
-		GLW::Vertex v2{
+		Vertex v2{
 			{ pos.x + size.x, pos.y },
 			{ m_Color.x, m_Color.y, m_Color.z, m_Color.w },
 			{ 1.0, 0.0 },
 			(float)textureID
 		};
-		GLW::Vertex v3{
+		Vertex v3{
 			{ pos.x + size.x, pos.y + size.y },
 			{ m_Color.x, m_Color.y, m_Color.z, m_Color.w },
 			{ 1.0, 1.0 },
@@ -76,19 +76,19 @@ namespace GLW
 
 	void Renderer::DrawTriangle(vec2 p1, vec2 p2, vec2 p3, int textureID/*=-1*/)
 	{
-		GLW::Vertex v0{
+		Vertex v0{
 			{ p1.x, p1.y },
 			{ m_Color.x, m_Color.y, m_Color.z, m_Color.w },
 			{ 0.0, 0.0 },
 			(float)textureID
 		};
-		GLW::Vertex v1{
+		Vertex v1{
 			{ p2.x, p2.y},
 			{ m_Color.x, m_Color.y, m_Color.z, m_Color.w },
 			{ 0.0, 1.0 },
 			(float)textureID
 		};
-		GLW::Vertex v2{
+		Vertex v2{
 			{ p3.x, p3.y },
 			{ m_Color.x, m_Color.y, m_Color.z, m_Color.w },
 			{ 1.0, 0.0 },

@@ -2,7 +2,7 @@
 #include <GLM/glm.hpp>
 
 
-namespace GLW
+namespace glw
 {
 	struct vec2
 	{
