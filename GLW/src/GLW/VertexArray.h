@@ -11,11 +11,12 @@ namespace GLW
 		VertexArray();
 		~VertexArray();
 
+		void AddBuffer(const VertexBuffer& vertexBuffer);
 		void AddBuffer(const VertexBuffer& vertexBuffer, const VertexBufferLayout& layout);
 		void Bind() const;
 		void Unbind() const;
 
 	private:
-		unsigned int m_RendererID;
+		uint32_t m_RendererID;
 	};
 }

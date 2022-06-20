@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 
 namespace GLW 
@@ -6,15 +7,15 @@ namespace GLW
 	class IndexBuffer 
 	{
 	public:
-		IndexBuffer(const unsigned int* data, unsigned int count);
+		IndexBuffer(uint32_t maxIndices);
 		~IndexBuffer();
 
 		void Bind() const;
 		void Unbind() const;
-		inline unsigned int getCount() const { return m_Count; }
+		inline uint32_t getCount() const { return m_Count; }
 
 	private:
-		unsigned int m_RendererID;
-		unsigned int m_Count;
+		uint32_t m_RendererID;
+		uint32_t m_Count;
 	};
 }

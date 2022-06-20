@@ -1,5 +1,4 @@
 #pragma once
-#include <string>
 #include <unordered_map>
 #include <glm/glm.hpp>
 
@@ -35,15 +34,13 @@ namespace GLW
 
 	private:
 		std::string m_Filepath;
-		unsigned int m_RendererID;
+		uint32_t m_RendererID;
 		std::unordered_map<std::string, int> m_UniformLocationCache;
 
-		// Separates the vertex & fragment shader source code
 		ShaderProgramSource ParseShader(const std::string& filepath);
-		// Compile the source code of a given shader type
-		unsigned int CompileShader(unsigned int type, const std::string& source);
-		// Create the shader program and store its ID in m_RendererID
+		uint32_t CompileShader(uint32_t type, const std::string& source);
 		void CreateShader(const std::string& vertexShader, const std::string& fragmentShader);
-		unsigned int GetUniformLocation(const std::string& name);
+
+		uint32_t GetUniformLocation(const std::string& name);
 	};
 }
