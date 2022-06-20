@@ -1,5 +1,7 @@
 #include "Renderer.h"
+
 #include <algorithm>
+
 #include <glm/glm.hpp>
 
 
@@ -94,7 +96,7 @@ namespace GLW
 		};
 
 		uint32_t max = 0;
-		if (m_Indices.size() != 0) {
+		if (!m_Indices.empty()) {
 			max = *std::max_element(m_Indices.begin(), m_Indices.end()) + 1;
 		}
 

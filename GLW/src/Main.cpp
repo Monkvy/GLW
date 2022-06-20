@@ -6,10 +6,12 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+
 #include "GLW/gwl.h"
 
 
@@ -68,11 +70,11 @@ int main()
 	while (!glfwWindowShouldClose(window))
 	{
 		renderer.BeginDraw();
-		renderer.DrawRect({ x, 400.0 }, { 100.0, 150.0 }, 0);
+		renderer.DrawRect({ x, 400.0f }, { 100.0f, 150.0f }, 0);
 		renderer.DrawTriangle({ width / 2, height / 4 }, { width / 4, height - height / 4 }, { width - width / 4, height - height / 4}, 1);
 		renderer.EndDraw();
 
-		x += 0.2;
+		x += 0.2f;
 
 		// Swap buffers & poll events
 		glfwSwapBuffers(window);

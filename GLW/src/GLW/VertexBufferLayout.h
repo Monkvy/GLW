@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+
 #include <GL/glew.h>
 
 
@@ -13,16 +14,7 @@ namespace GLW
 
 		// Get the size in bytes of a given type
 		// @param uint32_t type - The type (GL_FLOAT, GL_UNSIGNED_INT or GL_UNSIGNED_BYTE)
-		static uint32_t GetSizeOfType(uint32_t type)
-		{
-			switch (type) 
-			{
-			case GL_FLOAT: return 4;
-			case GL_UNSIGNED_INT: return 4;
-			case GL_UNSIGNED_BYTE: return 1;
-			}
-			return 0;
-		}
+		static uint32_t GetSizeOfType(uint32_t type);
 	};
 
 	class VertexBufferLayout 
@@ -31,31 +23,13 @@ namespace GLW
 		VertexBufferLayout() : m_Stride(0) {}
 
 		template<typename T>
-		void Push(uint32_t count)
-		{
-			static_assert(false);
-		}
-
+		void Push(uint32_t count);
 		template<>
-		void Push<float>(uint32_t count)
-		{
-			m_Elements.push_back({ GL_FLOAT, count, GL_FALSE });
-			m_Stride += VertexBufferElement::GetSizeOfType(GL_FLOAT) * count;
-		}
-
+		void Push<float>(uint32_t count);
 		template<>
-		void Push<uint32_t>(uint32_t count)
-		{
-			m_Elements.push_back({ GL_UNSIGNED_INT, count, GL_FALSE });
-			m_Stride += VertexBufferElement::GetSizeOfType(GL_UNSIGNED_INT) * count;
-		}
-
+		void Push<uint32_t>(uint32_t count);
 		template<>
-		void Push<unsigned char>(uint32_t count)
-		{
-			m_Elements.push_back({ GL_UNSIGNED_BYTE, count, GL_TRUE });
-			m_Stride += VertexBufferElement::GetSizeOfType(GL_UNSIGNED_BYTE) * count;
-		}
+		void Push<unsigned char>(uint32_t count);
 
 		inline const std::vector<VertexBufferElement> GetElements() const { return m_Elements; }
 		inline uint32_t GetStride() const { return m_Stride; }
