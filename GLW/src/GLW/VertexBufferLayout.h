@@ -11,6 +11,8 @@ namespace GLW
 		uint32_t count;
 		unsigned char normalized;
 
+		// Get the size in bytes of a given type
+		// @param uint32_t type - The type (GL_FLOAT, GL_UNSIGNED_INT or GL_UNSIGNED_BYTE)
 		static uint32_t GetSizeOfType(uint32_t type)
 		{
 			switch (type) 

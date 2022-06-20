@@ -12,10 +12,6 @@ namespace GLW
 		std::string FragmentSource;
 	};
 
-
-	// Use this class to handle the vertex & fragment shader
-	// Calling the constructor will bind the shader & 
-	// initialize the u_Textures shader uniform
 	class Shader 
 	{
 	public:
@@ -25,7 +21,6 @@ namespace GLW
 		void Bind() const;
 		void Unbind() const;
 
-		// Uniforms
 		void SetUniform1i(const std::string& name, int value);
 		void SetUniform1f(const std::string& name, float value);
 		void SetUniform1iv(const std::string& name, int size, int value[]);

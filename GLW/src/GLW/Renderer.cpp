@@ -16,7 +16,7 @@ namespace GLW
 
 	Renderer::~Renderer()
 	{
-
+		
 	}
 
 	void Renderer::BeginDraw()

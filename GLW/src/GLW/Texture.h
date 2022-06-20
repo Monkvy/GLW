@@ -10,7 +10,8 @@ namespace GLW
 		Texture(const std::string& filepath);
 		~Texture();
 
-		void Bind(uint32_t slot = 0) const;
+		// Bind this texture to a given slot on the GPU.
+		void Bind(uint32_t slot=0) const;
 		void Unbind() const;
 
 		inline int GetWidth() const { return m_Width; }
