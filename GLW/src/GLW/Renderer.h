@@ -32,7 +32,7 @@ namespace glw
         // @param vec2 position - The top left position of the rectangle
         // @param vec2 size - The width and height.
         // @param uint32_t textureID(-1) - The texture id of the rect (-1 = no texture, use colors).
-        void DrawRect(vec2 position, vec2 size, uint32_t textureID=-1);
+        void DrawRect(vec2 position, vec2 size, int textureID=-1);
 
 		// @param vec2 p1, p2, p3 - The triangle corners.
 		// @param uint32_t textureID(-1) - The texture id (-1 = no texture, use colors).

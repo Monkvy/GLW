@@ -26,4 +26,10 @@ namespace glw
 		vec2 texCoords;
 		float texID;
 	};
+
+	struct LineVertex
+	{
+		vec2 position;
+		vec4 color;
+	};
 }

@@ -70,8 +70,10 @@ int main()
 	while (!glfwWindowShouldClose(window))
 	{
 		renderer.BeginDraw();
-		renderer.DrawRect({ x, 400.0f }, { 100.0f, 150.0f }, 0);
+		renderer.SetColor({ 0.5f, 1.0f, 1.0f, 1.0f });
+		renderer.DrawRect({ x, 400.0f }, { 100.0f, 150.0f });
 		renderer.DrawTriangle({ width / 2, height / 4 }, { width / 4, height - height / 4 }, { width - width / 4, height - height / 4}, 1);
+		renderer.DrawLine({ 50, 100 }, { 200, 500 }, 150);
 		renderer.EndDraw();
 
 		x += 0.2f;
